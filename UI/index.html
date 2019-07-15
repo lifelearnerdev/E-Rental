@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>E-Rental</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="img/erental-logo.png" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="home-img body">
+    <header role="banner">
+        <nav role="navigation">
+            <img class="logo" src="img/erental-logo.png" alt="E-Rental logo" width="45px" height="45px">
+            <ul class="nav-links">
+                <li class="menus"><a href="#">HOUSES<i></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">View all houses</a></li>
+                        <li><a href="#">Biryogo</a></li>
+                        <li><a href="#">Kimirongo</a></li>
+                        <li><a href="#">Gikondo</a></li>
+                        <li><a href="#">Nyamirambo</a></li>
+                    </ul>
+                </li>
+                <li class="menus"><a href="#">BY PRICE</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Under 200000 FRW</a></li>
+                        <li><a href="#">Between 20000 FRW - 50000 FRW</a></li>
+                        <li><a href="#">Between 50000 FRW - 100000 FRW</a></li>
+                        <li><a href="#">Between 100000 FRW - 200000 FRW</a></li>
+                        <li><a href="#">Between 200000 FRW - 500000 FRW</a></li>
+                        <li><a href="#">Above 50000 FRW</a></li>
+                        <li><a href="#">Luxury houses</a></li>
+                    </ul>
+                </li>
+                <li class="menus "><a onclick="yourAds()" href="your_ads.html">YOUR ADS</a></li>
+                <li class="menus "><a onclick="postSaleAd()" href="post_sale_ad.html">POST A HOUSE</a></li>
+            </ul>
+            <div class="nav-btns ">
+                <button onclick="login()">Login</button>
+                <button onclick="signup()">Sign up</button>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="home-main">
+        <!-- <div class="call">Call us on +250784007323</div> -->
+        <div class="search">
+            <div class="e-rental-desc ">
+                <h1>
+                    WE HELP YOU FIND HOUSES FOR RENT IN KIGALI WITH MUCH EASE
+                </h1>
+            </div>
+            <p>Find a house for rent in any neighborhood</p>
+            <div class="search-inputs">
+                <input type="text" placeholder="Neighbourhood..." class="search-field">
+                <button class = "search-btn"> .</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
