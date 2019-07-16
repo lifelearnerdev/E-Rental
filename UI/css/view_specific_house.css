@@ -1,3 +1,6 @@
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
 #mainwraper {
     display: block;
     max-width: 1000px;
