@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>E-Rental</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="../img/erental-logo.png" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/view_specific_house.css">
+    <link rel="stylesheet" href="../css/modal.css">
+</head>
+
+<body class="body">
+    <header role="banner">
+        <nav role="navigation">
+            <img class="logo" src="../img/erental-logo.png" alt="E-Rental logo" width="45px" height="45px">
+            <ul class="nav-links">
+                <li class="menus"><a href="#">HOUSES<i></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">View all houses</a></li>
+                        <li><a href="#">Biryogo</a></li>
+                        <li><a href="#">Kimirongo</a></li>
+                        <li><a href="#">Gikondo</a></li>
+                        <li><a href="#">Nyamirambo</a></li>
+                    </ul>
+                </li>
+                <li class="menus"><a href="#">BY PRICE</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Under 200000 FRW</a></li>
+                        <li><a href="#">Between 20000 FRW - 50000 FRW</a></li>
+                        <li><a href="#">Between 50000 FRW - 100000 FRW</a></li>
+                        <li><a href="#">Between 100000 FRW - 200000 FRW</a></li>
+                        <li><a href="#">Between 200000 FRW - 500000 FRW</a></li>
+                        <li><a href="#">Above 50000 FRW</a></li>
+                        <li><a href="#">Luxury houses</a></li>
+                    </ul>
+                </li>
+                <li class="menus "><a onclick="yourAds()" href="your_ads.html">YOUR ADS</a></li>
+                <li class="menus "><a onclick="postSaleAd()" href="post_sale_ad.html">POST A HOUSE</a></li>
+            </ul>
+            <div class="nav-btns ">
+                <button onclick="login()">Login</button>
+                <button onclick="signup()">Sign up</button>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="mainwraper">
+            <h2>House for rent in Nyarugenge</h2>
+            <div class="clearfix" id="wrapping">
+                <section id="aligned">
+                    <div id="imgfix" class="mySlides">
+                        <img src="../img/one.jpg">
+                    </div>
+                    <div id="imgfix" class="mySlides">
+                        <img src="../img/three.jpg">
+                    </div>
+                    <div id="imgfix" class="mySlides">
+                        <img src="../img/four.jpg">
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </section>
+          
+                <section class="clearfix" id="aside">
+                    <div class="description">
+                        <div class="flag"><a href="#" id="myBtn">Flag this House</a></div>
+                        <h4>House Details:</h4>
+                        <p>Price: 500 000 RWF</p>
+                        <p>Bedrooms: 7</p>
+                        <p>Floors: 2</p>
+                        <p>Address: Nyarugenge</p>
+                    </div>
+                    <div class="rentBtn"><button class="btn-rent" id="submit">Rent a House</button></div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Flag a house as fraudelent</h2>
+            </div>
+            <div class="modal-body">
+                <input name="reason" placeholder="Reason" type="text"><br>
+                <textarea name="description" placeholder="Description" style="height:200px"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-rent" id="submit">Flag</button>
+            </div>
+        </div>
+      
+    </div>
+    <script src="../js/modal.js"></script>
+    <script src="../js/view_specific_house.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

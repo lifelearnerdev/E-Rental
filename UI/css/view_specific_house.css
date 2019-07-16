@@ -1,0 +1,164 @@
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#mainwraper {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 66px;
+    padding: 20px 15px;
+    background: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#mainwraper h2 {
+    border-bottom: 1px solid #ddd;
+    color: #363636;
+    font-size: 2.6em;
+    line-height: 1.8em;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 12px 0;
+    text-align: center;
+}
+
+#mainwraper h4 {
+    font-size: 1em;
+    color: #212121;
+    margin: 0;
+    font-size: 28px;
+}
+
+#wrapping {
+    width: 100%;
+    box-sizing: border-box;
+}
+.clearfix {
+    display: inline-block;
+}
+
+#aligned {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 500px;
+    margin-right: 50px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -40%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+#imgfix img{
+	width: 100%;
+}
+
+#aside {
+    float: left;
+    width: 400px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mySlides {
+    display: none;
+}
+#aside .description p{
+	font-size: 20px;
+    color: #999;
+    line-height: 2em;
+    margin: 0;
+    width: 95%;
+}
+#aside .flag{
+    margin-bottom: 30px;
+    font-size: 1em;
+    text-align: right;
+}
+#aside .flag a{
+    color: red;
+    text-decoration: none;
+}
+#aside .flag a:hover{
+    text-decoration: underline;
+}
+#aside .rentBtn{
+    margin-top: 30px;
+    text-align: right;
+}
+
+/* button style */
+.btn-rent{
+    cursor: pointer;
+    background-color: white; /* Green */
+    border: 1px solid #008080;
+    border-radius: 15px;
+    color: #008080;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.btn-rent:hover{
+    background-color: #008080; /* Green */
+    border: 1px solid #008080;
+    color: white;
+}
+
+
+/* smaller screen dropoff *******/
+@media(max-width: 800px){
+	#aligned, #aside {
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+    }
+    #mainwraper h2 {
+        font-size: 1.6em;
+        line-height: 1.5em;
+    }
+}
+
+
+@media(max-width: 550px) {
+    
+}
+ 
+/* iPhone Landscape ********/
+@media(max-width: 480px) {
+  body {
+    padding: 10px 0px;
+  }
+}
+ 
+/* iPhone portrait *******/
+@media(max-width: 320px) {
+  body {
+    padding: 10px 0px;
+  }
+}
