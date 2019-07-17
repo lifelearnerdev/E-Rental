@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    box-sizing:border-box; 
+}
+.nav-links {
+margin-top: 1rem;
+    z-index: 1;
+    text-align: center;
+}
+.frameM{
+    position: relative;
+    display: flex;
+    margin-left: 15%;
+    top: 0.5rem;
+    background: #FFFFFF;
+    overflow-x: hidden;
+    width: 70vw;
+
+}
+h3{
+    position: relative;
+    left: 3rem;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 45px;
+    margin-bottom: -0.5rem;
+    }
+.activeM a{
+    color: rgb(8, 100, 100);
+}
+form{
+    width: 100%;
+            
+    }
+label, input{
+    display: block;
+    
+}
+
+label{
+    position: relative;
+    width: fit-content;
+    left: 3rem;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Arial;
+    font-style: normal;
+    line-height: 27px;
+    color: #000000;
+}
+input{
+    position: relative;
+    width: 70%;
+    left: 3rem;
+    height: 30px;
+    background: #FFFFFF;
+    border: thin solid #E5E5E5;
+    border-radius: 5px;
+    }
+
+#modal{
+    width: 70%;
+    left: 4rem;
+    display:none;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    height: fit-content;
+    overflow: auto;
+    border: 1px solid #888888;
+    bottom: 3px;
+    border-radius: 5px;
+        
+    }
+#previews{
+    flex-wrap: wrap;
+    height: fit-content;
+        
+    }
+    
+.btn-submitM{
+    left: 27%;
+    top: 1rem;
+    bottom: 2rem;
+    font-size: 17px;
+    position: relative;
+    width: 10rem;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    color:#008080;
+    border: 1px solid #008080;
+    margin-bottom: 2rem;
+    
+    }
+
+/* Start of Media Queries 
+--------------------------------------------------------------------------------------
+*/
+
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+.imageM{
+    content: url(../images/architecture-concrete-daylight-2102587.jpg);
+    width:45%;
+    top: 1rem;
+    height: 30rem;
+    left: 1rem !important;
+    position: relative;
+            
+    } 
+.frameM{
+    display: flex;
+    width: 70%;
+    }
+        
+form{
+    width: 100%;
+                    
+    }
+label, input{
+    display: block;
+            
+    }
+    
+label{
+    width: fit-content;
+    left: 3rem;
+    font-weight: 400;
+    font-size: 16px;
+    }
+input{
+    width: 70%;
+    left: 3rem;
+    height: 30px;
+    }
+#modal{
+    width: 70px;
+    left: 3rem;
+            
+    }
+        
+.btn-submitM{
+    left: 30%;
+    top: 1rem;
+    bottom: 2rem;
+    font-size: 17px;
+    }
+h3{
+    left: 3rem;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+.frameM{
+    height: 90vh;
+    width: 70vw;
+    left: 2%;
+    }
+.imageM{
+    content: url(../images/architecture-concrete-daylight-2102587.jpg);
+    width: clac(70vw - 30rem);
+    height: 30rem;
+    top: 1rem;
+    position: relative;
+    left: 2rem;
+        
+    }
+form{
+    position: relative;
+    width: calc(70vw - 20rem);
+        
+    }
+h3{
+
+    left: 6rem;
+    }
+
+label{
+    left: 6rem;
+    font-weight: 500;
+    font-size: 17px;
+}
+input{
+    left: 6rem;
+    }
+#modal{
+
+    left: 7rem; 
+}
+
+.btn-submitM{ 
+    left: 39%;
+    top: 2rem;
+    bottom: 1rem;
+    position: relative;
+    
+}
+}
