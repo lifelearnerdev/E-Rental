@@ -84,6 +84,7 @@ nav button:hover {
 .nav-btns {
     min-width: 250px;
     padding-top: 10px;
+    margin-right: 20px;
 }
 
 .logo {
