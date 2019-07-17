@@ -1,0 +1,112 @@
+// Google font download
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+// Resetting and setting
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+// Colors and fonts
+
+$bodyBackgroundColor: #f2f2f2;
+$subContainerBackgroundColor: #fff;
+$titleFontColor: #001f3f;
+$labelFontColor: #3f2323;
+$buttonBackgroundColor: #001f3f;
+$buttonHoverBackgroundColor: #083563;
+$buttonFontColor: #fff;
+$borderFocusColor: #083563;
+$bodyFont: 'Poppins', sans-serif;
+
+
+// implementation
+
+body {
+    background: $bodyBackgroundColor;
+    font-family: $bodyFont;
+
+    .container { padding: 0 20px;
+        .fa {
+            font-size: 40px;
+            color: $titleFontColor;
+            margin: 30px 0 0 15px;
+        }
+    
+        .sub-container { max-width: 800px; width: 100%; height: 480px; margin: 90px auto 0; 
+            display: flex; background: $subContainerBackgroundColor; box-shadow: 0 0 4px 4px;
+
+            .banner-img { width: 400px; height: 100%; 
+            
+                img { width: 100%; height: 100%; }
+
+            }
+
+            .login-form { width: 400px; height: 100%; text-align: center;
+                padding: 40px 35px 0; position: relative;
+
+                .title { color:  $titleFontColor; text-transform: uppercase;
+                    letter-spacing: 2px; font-size: 28px;
+                    font-weight: bold; margin-bottom: 25px;
+                  }
+
+                  .label { color: $labelFontColor; font-size: 16px; letter-spacing: 2px;  }
+
+                  .input { margin: 5px 0 15px; width: 70%; padding: 8px; text-align: center; }
+
+                  .input:focus { border: solid 1.2px $borderFocusColor }
+
+                  .forgot { font-size: 11px; letter-spacing: 1px; margin-top: 12px; }
+
+                  .account { font-size: 14px; letter-spacing: 1px; }
+
+                  .btn { position: relative; margin: 18px 0 18px 0; border-radius: 10px;
+                    padding: 10px 15px 10px 15px; background: $buttonBackgroundColor; color: $buttonFontColor;
+                    font-size: 15px; letter-spacing: 2px; text-transform: uppercase;
+                    cursor: pointer;
+                    }
+
+                 .btn:hover {
+                    background: $buttonHoverBackgroundColor;
+                        }
+
+                 a {
+                    font-weight: bolder;
+                    }
+
+              }
+
+          }
+
+    }
+}
+
+// Responsive Web Design
+
+@media screen and (max-width: 500px)
+{
+    .sub-container { flex-direction: column; max-width: 300px; height: auto;
+                     margin-top: 50px; margin-bottom: 50px;
+
+                     .banner-img { width: 100%; height: 220px; }
+
+                     .login-form { width: 100%; padding: 20px 35px 0; margin-left: 25px; 
+                    
+                        .title { font-size: 24px; margin-bottom: 20px; }
+
+                        .input { margin-bottom: 10px; }
+
+                        .btn { margin: 10px 0 40px 0; padding: 10px; }
+
+                        .prompt { font-size: 14px; letter-spacing: 1px; margin-bottom: 75px; }
+
+                        .account { margin-bottom: 50px; }
+
+                    } 
+                   }
+}
