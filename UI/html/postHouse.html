@@ -1,0 +1,106 @@
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/postHouse.css">
+        <link rel="icon" type="image/ico" href="../img/erental-logo.png" />
+        <link rel="stylesheet" href="../css/main.css">
+        <title>E-Rental</title>
+    </head>
+    <body>
+        <header role="banner">
+            <nav role="navigation">
+                <img class="logo" src="../img/erental-logo.png" alt="E-Rental logo" width="45px" height="45px">
+                <ul class="nav-links">
+                    <li class="menus"><a href="#">HOUSES<i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./view_all_available_houses.html">View all houses</a></li>
+                            <li><a href="./view_all_available_houses.html">Biryogo</a></li>
+                            <li><a href="./view_all_available_houses.html">Kimirongo</a></li>
+                            <li><a href="./view_all_available_houses.html">Gikondo</a></li>
+                            <li><a href="./view_all_available_houses.html">Nyamirambo</a></li>
+                        </ul>
+                    </li>
+                    <li class="menus"><a href="#">BY PRICE</a>
+                        <ul class="dropdown">
+                            <li><a href="./view_all_available_houses.html">Under 200000 FRW</a></li>
+                            <li><a href="./view_all_available_houses.html">Between 20000 FRW - 50000 FRW</a></li>
+                            <li><a href="./view_all_available_houses.html">Between 50000 FRW - 100000 FRW</a></li>
+                            <li><a href="./view_all_available_houses.html">Between 100000 FRW - 200000 FRW</a></li>
+                            <li><a href="view_all_available_houses.html">Between 200000 FRW - 500000 FRW</a></li>
+                            <li><a href="./view_all_available_houses.html">Above 50000 FRW</a></li>
+                            <li><a href="./view_all_available_houses.html">Luxury houses</a></li>
+                        </ul>
+                    </li>
+                    <li class="menus "><a onclick="yourAds()" href="your_ads.html">YOUR ADS</a></li>
+                    <li class="activeM menus"><a onclick="postSaleAd()" href="postHouse.html">POST A HOUSE</a></li>
+                </ul>
+                <div class="nav-btns ">
+                    <a href="../index.html"><button>Logout</button></a>
+                    <button onclick="signup()" hidden>Sign up</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="frameM">
+                <div class="imageM">
+    
+                </div>
+            <form class="formM" enctype="multipart/form-data" >
+                <div class="property-detailsM">
+                    <h3 class="property-detailsM">Property Details</h3>
+                    <div>
+                        <label for="bedroomsNumbers">Number Of Bedrooms</label>
+                        <input class="number-of-bedroomsM"  type="number" name="bedroomsNumbers" >
+                    </div>
+                    <div>
+                        <label for="bathroomNumbers">NumberOf Bathrooms</label>
+                        <input class="number-of-bathroomsM" name="bathroomNumbers" type="number">
+                    </div>
+                </div>
+                <div class="price">
+                        <h3 class="price-detailsM">Pricing</h3>
+                        <div>
+                            <label for="price">Price (RWF)</label>
+                            <input class="priceM"  type="number" name="price" >
+                        </div>
+                        <div>
+                            <label for="upfront">Upfront</label>
+                            <input class="upfront-amount" name="upfront" type="number">
+                        </div>
+                </div>
+                <div class="locationM">
+                        <h3 class="location-headerM">Location</h3>
+                        <div>
+                            <label for="district">District</label>
+                            <input class="districtM"  type="text" name="price" >
+                        </div>
+                        <div>
+                            <label for="sector">Sector</label>
+                            <input class="sectorM" name="sector" type="text">
+                        </div>
+                </div>
+                <div class="house-imagesM">
+                        <h3 class="upload-imgsM">Upload Images</h3>
+                        <div id="modal">
+                               <div id="previews">
+
+                               </div>
+                         
+                        </div>
+                        <input id="img" type="file" onchange="showImage.call(this)" multiple/>
+                        
+                </div>
+                <div class="submitM">
+                        <button class="btn-submitM" href="#">SUBMIT</button>
+                      </div>
+
+            </form>
+        </section>
+        </main>
+        <script src="../js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </body>
+</html>
