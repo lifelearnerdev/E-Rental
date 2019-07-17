@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+body .container {
+  padding: 0 20px;
+}
+body .container .fa {
+  font-size: 40px;
+  color: #001f3f;
+  margin: 30px 0 0 15px;
+}
+body .container .sub-container {
+  max-width: 800px;
+  width: 100%;
+  height: 480px;
+  margin: 90px auto 0;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 0 4px 4px;
+}
+body .container .sub-container .banner-img {
+  width: 400px;
+  height: 100%;
+}
+body .container .sub-container .banner-img img {
+  width: 100%;
+  height: 100%;
+}
+body .container .sub-container .registration-form {
+  width: 400px;
+  height: 100%;
+  text-align: center;
+  padding: 40px 35px 0;
+  position: relative;
+}
+body .container .sub-container .registration-form .title {
+  color: #001f3f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+body .container .sub-container .registration-form #mail {
+  margin-left: 42px;
+}
+body .container .sub-container .registration-form .label {
+  color: #3f2323;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+body .container .sub-container .registration-form .input {
+  margin: 5px 0 15px;
+  width: 60%;
+  padding: 8px;
+  text-align: center;
+}
+body .container .sub-container .registration-form .input:focus {
+  border: solid 1.2px #083563;
+}
+body .container .sub-container .registration-form .account {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 12px 0 0 90px;
+}
+body .container .sub-container .registration-form .btn {
+  position: relative;
+  margin: 10px 0 10px 90px;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  background: #001f3f;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+body .container .sub-container .registration-form .btn:hover {
+  background: #083563;
+}
+body .container .sub-container .registration-form a {
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+  .sub-container {
+    flex-direction: column;
+    max-width: 300px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  .sub-container .banner-img {
+    width: 100%;
+    height: 220px;
+  }
+  .sub-container .registration-form {
+    width: 100%;
+    padding: 20px 35px 0;
+    margin: 0 0 50px 25px;
+  }
+  .sub-container .registration-form .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .sub-container .registration-form .input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .sub-container .registration-form .btn {
+    margin: 10px 0 40px 0;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=sign-up-style.css.map */
