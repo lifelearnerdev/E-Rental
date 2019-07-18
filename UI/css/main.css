@@ -82,11 +82,15 @@ nav button:hover {
 }
 
 .nav-btns {
+
     min-width: 250px;
     padding-top: 10px;
     margin-right: 20px;
 }
-
+.nav-btns a{
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .logo {
     border-radius: 50%;
     margin-left: 20px;
