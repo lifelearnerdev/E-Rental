@@ -1,0 +1,53 @@
+{
+  "name": "e-rental",
+  "version": "1.0.0",
+  "description": "E-Rental is an free online market where people around kigali can post and request a house for rent",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node app.js",
+    "dev-start": "nodemon --exec babel-node --presets @babel/preset-env app.js",
+    "lint": "eslint --fix app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malaba6/E-Rental.git"
+  },
+  "keywords": [
+    "rentals",
+    "kigali",
+    "house"
+  ],
+  "author": "code-geeks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malaba6/E-Rental/issues"
+  },
+  "homepage": "https://github.com/Malaba6/E-Rental#readme",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.14.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "nodemon": "^1.19.1",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.1",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  }
+}
