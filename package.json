@@ -38,10 +38,10 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "nodemon": "^1.19.1",
-    "pg": "^7.11.0"
+    "pg": "^7.11.0",
+    "body-parser": "^1.19.0"
   },
   "devDependencies": {
-    "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.5",
     "eslint": "^4.19.1",
