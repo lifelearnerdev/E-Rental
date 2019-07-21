@@ -9,4 +9,11 @@ const newUser = {
   password: '123456',
 };
 
-export default newUser;
+const theUser = {
+  email: newUser.email,
+  password: newUser.password,
+};
+
+export {
+  newUser, theUser,
+};
