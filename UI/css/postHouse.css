@@ -7,6 +7,9 @@ margin-top: 1rem;
     z-index: 1;
     text-align: center;
 }
+.logo {
+    margin-top: -8px;
+}
 .frameM{
     position: relative;
     display: flex;
