@@ -11,7 +11,7 @@ chai.should();
 describe('USER ENDPOINT TESTS', () => {
   it('Should register a new user', (done) => {
     chai.request(server)
-      .post('/api/auth/signup')
+      .post('/api/v1/auth/signup')
       .send(newUser)
       .set('Accept', 'Application/JSON')
       .end((err, res) => {
@@ -26,7 +26,7 @@ describe('USER ENDPOINT TESTS', () => {
 
   it('Should sign the new user in', (done) => {
     chai.request(server)
-      .post('/api/auth/signin')
+      .post('/api/v1/auth/signin')
       .send(theUser)
       .set('Accept', 'Application/JSON')
       .end((err, res) => {
