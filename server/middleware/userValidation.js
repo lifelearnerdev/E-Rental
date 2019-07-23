@@ -14,7 +14,7 @@ const validate = {
         .required(),
       lastname: Joi.string().alphanum().min(4).max(15)
         .required(),
-      email: Joi.string().email({ minDomainAtomas: 2 })
+      email: Joi.string().email({ minDomainAtoms: 2 })
         .required(),
       password: Joi.string().alphanum().min(3).max(15)
         .required(),
