@@ -18,6 +18,8 @@ const validate = {
         .required(),
       password: Joi.string().alphanum().min(3).max(15)
         .required(),
+      samePassword: Joi.string().alphanum().min(3).max(15)
+        .required(),
     });
 
     const { error } = Joi.validate(req.body, userSchema);
