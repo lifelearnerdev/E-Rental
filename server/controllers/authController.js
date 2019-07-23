@@ -23,6 +23,8 @@ class Authenticate {
         status: 409,
         error: 'user with the specified email already exists',
       });
+    } else if (req.body.password !== req.body.samePassword) {
+      res.status(400).json({ status: 400, error: 'passwords do not match' });
     } else {
       req.body.password = crypt(req.body.password);
       const user = await User.create(req.body);
