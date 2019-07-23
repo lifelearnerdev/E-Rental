@@ -50,7 +50,11 @@ class Authenticate {
     } else {
       const truePass = decrypt(req.body.password, userExists.password);
       if (truePass) {
-        const token = jwt(userExists);
+        const userInfo = {
+          id: userExists.id,
+          email: userExists.email,
+        };
+        const token = jwt(userInfo);
         const {
           id, firstname, lastname, email,
         } = userExists;
