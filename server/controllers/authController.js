@@ -19,8 +19,8 @@ class Authenticate {
   static async registerUser(req, res) {
     const userExists = await User.findOne({ where: { email: req.body.email } });
     if (userExists) {
-      res.status(400).json({
-        status: 400,
+      res.status(409).json({
+        status: 409,
         error: 'user with the specified email already exists',
       });
     } else {
