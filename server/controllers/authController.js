@@ -26,15 +26,20 @@ class Authenticate {
     } else if (req.body.password !== req.body.samePassword) {
       res.status(400).json({ status: 400, error: 'passwords do not match' });
     } else {
-      req.body.password = crypt(req.body.password);
-      const user = await User.create(req.body);
-      res.status(201).json({
-        status: 201,
-        success: 'user registered',
-        data: [{
-          user,
-        }],
-      });
+      const strongPass = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,15}$');
+      if (strongPass.test(req.body.password)) {
+        req.body.password = crypt(req.body.password);
+        const user = await User.create(req.body);
+        res.status(201).json({
+          status: 201,
+          success: 'user registered',
+          data: [{
+            user,
+          }],
+        });
+      } else {
+        res.status(400).json({ status: 400, error: 'password must contain atleast one uppercase letter, lowercase letter, numeric digit and start from 6 TO 15 characters' });
+      }
     }
   }
 
