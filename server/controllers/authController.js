@@ -12,7 +12,7 @@ dotenv.config();
  */
 class Authenticate {
   /**
-   * user registration
+   * @description user registration
    * @param {object} req
    * @param {object} res
    */
@@ -44,7 +44,7 @@ class Authenticate {
   }
 
   /**
-   * user sign in
+   * @description user sign in
    * @param {object} req
    * @param {object} res
    */
