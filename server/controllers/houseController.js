@@ -1,9 +1,8 @@
 /* eslint-disable class-methods-use-this */
-
 /* eslint-disable indent */
 import dotenv from 'dotenv';
 import cloudinary from 'cloudinary';
-import house from '../config/dbConfig';
+import { House } from '../config/dbConfig';
 
 
 dotenv.config();
@@ -22,7 +21,7 @@ class Houses {
           const imgURL = image.secure_url;
           const payload = req.body;
           payload.images = imgURL;
-          const postedHouse = await house.House.create(payload);
+          const postedHouse = await House.create(payload);
           if (postedHouse) {
             res.status(201).json({
               status: 201,

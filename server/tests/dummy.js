@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import jwt from 'jsonwebtoken';
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ const theUser = {
   password: newUser.password,
 };
 const newHouse = {
-  houseNumber: 'Kg-ny-68',
+  houseNumber: 'Kgny68',
   numberOfRooms: 5,
   numberOfToiltes: 3,
   price: 500000,
@@ -24,6 +25,22 @@ const newHouse = {
   sector: 'Agatare',
 };
 
+const invalidHouse1 = {
+  houseNumber: 'Kgny68',
+  numberOfRooms: 0,
+  numberOfToiltes: 3,
+  price: 500000,
+  upfront: 15000000,
+  district: 'Nyarugenge',
+  sector: 'Agatare',
+};
+
+const info = {
+  id: 1,
+  email: 'cyubahiro@gmail.com',
+};
+const token = jwt.sign(info, process.env.SECRET_KEY);
+
 export {
-  newUser, theUser, newHouse,
+  newUser, theUser, newHouse, token, invalidHouse1,
 };

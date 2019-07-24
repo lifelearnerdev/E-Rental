@@ -37,5 +37,4 @@ if (process.env.NODE_ENV === 'test') {
 const User = UserModel(sequelize, Sequelize);
 const House = HouseModel(sequelize, Sequelize);
 
-export { sequelize };
-export default { House, User };
+export { sequelize, User, House };

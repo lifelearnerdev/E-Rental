@@ -3,13 +3,13 @@ import Joi from 'joi';
 const validate = {
   validateCreateHouse(req, res, next) {
     const houseSchema = Joi.object().keys({
-      houseNumber: Joi.string(),
+      houseNumber: Joi.string().required(),
       numberOfRooms: Joi.number().integer().min(1).required(),
       numberOfToilets: Joi.number().integer().required(),
       price: Joi.number().required(),
       upfront: Joi.number().required(),
-      district: Joi.string().alphanum(),
-      sector: Joi.string().alphanum(),
+      district: Joi.string().alphanum().required(),
+      sector: Joi.string().alphanum().required(),
 
     });
     const { error } = Joi.validate(req.body, houseSchema);

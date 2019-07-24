@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import User from '../config/dbConfig';
+import { User } from '../config/dbConfig';
 import crypt from '../helpers/hashPassword';
 import decrypt from '../helpers/unhashPassword';
 import jwt from '../helpers/token';
