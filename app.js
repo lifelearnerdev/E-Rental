@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import { sequelize } from './server/config/dbConfig';
 import user from './server/routes/authRoutes';
+import houses from './server/routes/houseRoutes';
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
 app.use('/api/v1', user);
+app.use('/api/v1/houses', houses);
 
 app.use((req, res) => {
   res.status(404).json({ status: 404, error: 'route not found' });
