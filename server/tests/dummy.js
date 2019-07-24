@@ -6,7 +6,15 @@ const newUser = {
   firstname: 'Emmanuel',
   lastname: 'CYUBAHIRO',
   email: 'cyubahiro@gmail.com',
-  password: '123456',
+  password: '1234aB',
+  samePassword: '1234aB',
 };
 
-export default newUser;
+const theUser = {
+  email: newUser.email,
+  password: newUser.password,
+};
+
+export {
+  newUser, theUser,
+};

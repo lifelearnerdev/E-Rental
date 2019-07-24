@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
-app.use('/api/', user);
+app.use('/api/v1', user);
 
 app.use((req, res) => {
   res.status(404).json({ status: 404, error: 'route not found' });
