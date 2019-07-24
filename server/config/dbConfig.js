@@ -2,6 +2,7 @@
 import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
 import UserModel from '../models/users';
+import HouseModel from '../models/houses';
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 const User = UserModel(sequelize, Sequelize);
+const House = HouseModel(sequelize, Sequelize);
 
 export { sequelize };
-export default User;
+export default { User, House };
