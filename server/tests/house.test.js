@@ -20,7 +20,18 @@ describe('LANDLORD SHOULD BE ABLE TO POST HOUSE ', () => {
       .end((err, res) => {
         expect(res).to.have.status(201);
         expect(res.body).to.have.property('data');
-        expect(res.body).to.have.property('success').eql('House successfully posted');
+        expect(res.body).to.have.property('success').equals('House successfully posted');
+      });
+  });
+  it('should return status 403 with an error', () => {
+    chai
+      .request(app)
+      .post('/api/v1/houses/')
+      .attach('images', fs.readFileSync('UI/img/three.jpg'), 'three.jpg')
+      .field(newHouse)
+      .end((err, res) => {
+        expect(res).to.have.status(403);
+        expect(res.body).to.have.property('error').equals('Forbidden access!!');
       });
   });
   // House.destroy({ truncate: true, cascade: false });

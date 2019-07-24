@@ -8,11 +8,16 @@ export default (sequelize, DataTypes) => {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      numberofbedrooms: {
+      houseNumber: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        unique: true,
+      },
+      numberOfRooms: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      numberoftoilets: {
+      numberOfToilets: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },

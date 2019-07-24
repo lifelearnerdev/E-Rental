@@ -1,6 +1,6 @@
-/* eslint-disable indent */
 /* eslint-disable class-methods-use-this */
-/* eslint-disable no-loop-func */
+
+/* eslint-disable indent */
 import dotenv from 'dotenv';
 import cloudinary from 'cloudinary';
 import house from '../config/dbConfig';
@@ -13,10 +13,11 @@ cloudinary.config({
   api_secret: process.env.api_secret,
 });
 class Houses {
-     postHouse(req, res) {
-      const filename = req.files.images.path;
-      cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
-        try {
+   postHouse(req, res) {
+    const filename = req.files.images.path;
+
+    cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
+      try {
         if (err) { console.log(err); } else {
           const imgURL = image.secure_url;
           const payload = req.body;
@@ -37,11 +38,11 @@ class Houses {
             });
           }
         }
-    } catch (error) {
-      console.log(error);
-    }
-  });
-}
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  }
 }
 
 export default Houses;

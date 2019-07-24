@@ -15,8 +15,9 @@ const theUser = {
   password: newUser.password,
 };
 const newHouse = {
-  numberofbedrooms: 5,
-  numberoftoilets: 3,
+  houseNumber: 'Kg-ny-68',
+  numberOfRooms: 5,
+  numberOfToiltes: 3,
   price: 500000,
   upfront: 15000000,
   district: 'Nyarugenge',

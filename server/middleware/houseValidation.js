@@ -3,8 +3,9 @@ import Joi from 'joi';
 const validate = {
   validateCreateHouse(req, res, next) {
     const houseSchema = Joi.object().keys({
-      numberofbedrooms: Joi.number().integer().min(1).required(),
-      numberoftoilets: Joi.number().integer().required(),
+      houseNumber: Joi.string(),
+      numberOfRooms: Joi.number().integer().min(1).required(),
+      numberOfToilets: Joi.number().integer().required(),
       price: Joi.number().required(),
       upfront: Joi.number().required(),
       district: Joi.string().alphanum(),

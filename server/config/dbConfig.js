@@ -38,4 +38,4 @@ const User = UserModel(sequelize, Sequelize);
 const House = HouseModel(sequelize, Sequelize);
 
 export { sequelize };
-export default { User, House };
+export default { House, User };
