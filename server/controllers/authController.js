@@ -51,7 +51,7 @@ class Authenticate {
   static async signUserIn(req, res) {
     const userExists = await User.findOne({ where: { email: req.body.email } });
     if (!userExists) {
-      res.status(401).json({ status: 401, error: 'incorrect email or password' });
+      res.status(400).json({ status: 400, error: 'incorrect email or password' });
     } else {
       const truePass = decrypt(req.body.password, userExists.password);
       if (truePass) {
@@ -75,7 +75,7 @@ class Authenticate {
           }],
         });
       } else {
-        res.status(401).json({ status: 401, error: 'incorrect email or password' });
+        res.status(400).json({ status: 400, error: 'incorrect email or password' });
       }
     }
   }
