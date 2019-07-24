@@ -12,7 +12,6 @@ cloudinary.config({
   api_key: process.env.api_key,
   api_secret: process.env.api_secret,
 });
-
 class Houses {
      postHouse(req, res) {
       const filename = req.files.images.path;
@@ -20,15 +19,9 @@ class Houses {
         try {
         if (err) { console.log(err); } else {
           const imgURL = image.secure_url;
-          const postedHouse = await house.House.create({
-               numberofbedrooms: req.body.numberofbedrooms,
-               numberoftoilets: req.body.numberoftoilets,
-               price: req.body.price,
-               upfront: req.body.upfront,
-               district: req.body.district,
-               sector: req.body.sector,
-               images: imgURL,
-          });
+          const payload = req.body;
+          payload.images = imgURL;
+          const postedHouse = await house.House.create(payload);
           if (postedHouse) {
             res.status(201).json({
               status: 201,

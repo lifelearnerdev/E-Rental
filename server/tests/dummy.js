@@ -14,7 +14,15 @@ const theUser = {
   email: newUser.email,
   password: newUser.password,
 };
+const newHouse = {
+  numberofbedrooms: 5,
+  numberoftoilets: 3,
+  price: 500000,
+  upfront: 15000000,
+  district: 'Nyarugenge',
+  sector: 'Agatare',
+};
 
 export {
-  newUser, theUser,
+  newUser, theUser, newHouse,
 };
