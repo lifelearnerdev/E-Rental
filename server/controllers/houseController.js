@@ -46,5 +46,26 @@ class Houses {
   }
 });
    }
+
+  /**
+   * @author Carlos Gringo
+   * @description The following function handles user view a specific house
+   */
+    async fetchId(req, res) {
+      const houseId = parseInt(req.params.id, 10);
+      const findHouse = await House.findOne({ where: { id: houseId } });
+      if(findHouse) {
+        res.status(200).json({
+          status: 200,
+          success: `House with id of ${houseId} Retrieved Successfully`,
+          data: findHouse
+        });
+      }else {
+        res.status(404).json({
+          status: 404,
+          error: 'House with given Id not found!',
+        });
+      }
+    }
 }
 export default Houses;

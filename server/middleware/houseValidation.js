@@ -20,6 +20,17 @@ const validate = {
     next();
   },
 
+  validateparamsId(req, res, next) {
+    const paramsSchema = Joi.object().keys({
+      id: Joi.number().integer().positive()
+    });
+    const { error } = Joi.validate(req.params, paramsSchema);
+    if (error) {
+      res.status(400).json({ error: error.details[0].message.replace(/\\|(")/g, '') });
+      return;
+    }
+    next();
+  },
 };
 
 export default validate;

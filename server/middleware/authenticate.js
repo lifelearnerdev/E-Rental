@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
  * @param {request} next
  */
 const verifyUser = (req, res, next) => {
-  const authHeader = req.headers.authorization.split(' ')[1];
+  const authHeader = req.headers.authorization;
   if (typeof authHeader === 'undefined' || !authHeader) {
     res.status(401).json({ status: 401, error: 'unauthorized access. login or register' });
   } else {
