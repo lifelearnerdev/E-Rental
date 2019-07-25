@@ -106,4 +106,5 @@ async getHouses(req, res) {
       }
     }
 }
+
 export default Houses;
