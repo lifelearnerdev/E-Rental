@@ -13,7 +13,7 @@ cloudinary.config({
 });
 
 class Houses {
-   postHouse(req, res) {
+   async postHouse(req, res) {
     const filename = req.files.images.path;
     cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
       try {
