@@ -22,7 +22,7 @@ const validate = {
 
   validateparamsId(req, res, next) {
     const paramsSchema = Joi.object().keys({
-      id: Joi.number().integer().positive()
+      id: Joi.number().integer().positive(),
     });
     const { error } = Joi.validate(req.params, paramsSchema);
     if (error) {
