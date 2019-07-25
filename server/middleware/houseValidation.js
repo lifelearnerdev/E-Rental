@@ -20,7 +20,7 @@ const validate = {
     next();
   },
 
-  validateparamsId(req, res, next) {
+  validateParamsId(req, res, next) {
     const paramsSchema = Joi.object().keys({
       id: Joi.number().integer().positive(),
     });
