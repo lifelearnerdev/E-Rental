@@ -9,6 +9,7 @@ chai.use(chaiHTTP);
 chai.should();
 
 describe('USER ENDPOINT TESTS', () => {
+  User.destroy({ truncate: true, cascade: false });
   it('Should register a new user', (done) => {
     chai.request(server)
       .post('/api/v1/auth/signup')
@@ -39,5 +40,4 @@ describe('USER ENDPOINT TESTS', () => {
         done();
       });
   });
-  User.destroy({ truncate: true, cascade: false });
 });

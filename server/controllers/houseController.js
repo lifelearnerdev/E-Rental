@@ -6,16 +6,27 @@ import cloudinary from 'cloudinary';
 import { House } from '../config/dbConfig';
 
 dotenv.config();
+
 cloudinary.config({
   cloud_name: process.env.cloud_name,
   api_key: process.env.api_key,
   api_secret: process.env.api_secret,
 });
 
+/**
+ * @author Musindi KADHUWA
+ * @description This class handles house operations
+ */
 class Houses {
-   postHouse(req, res) {
+  /**
+   * @author Musindi KADHUWA
+   * @description House creation
+   * @param {object} req
+   * @param {object} res
+   */
+   async postHouse(req, res) {
     const filename = req.files.images.path;
-    cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
+    cloudinary.v2.uploader.upload(filename, async (err, image) => {
       try {
         if (!err) {
           const imgURL = image.secure_url;
@@ -44,7 +55,12 @@ class Houses {
   });
  }
 
-//  get all available houses for sale
+/**
+   * @author Raymond GAKWAYA
+   * @description Get all available houses for sale
+   * @param {object} req
+   * @param {object} res
+   */
 async getHouses(req, res) {
   try {
     const findHouse = await House.findAll();
@@ -69,18 +85,20 @@ async getHouses(req, res) {
 
   /**
    * @author Carlos Gringo
-   * @description The following function handles user view a specific house
+   * @description Specific house retrieval
+   * @param {object} req
+   * @param {object} res
    */
     async fetchId(req, res) {
       const houseId = parseInt(req.params.id, 10);
       const findHouse = await House.findOne({ where: { id: houseId } });
-      if(findHouse) {
+      if (findHouse) {
         res.status(200).json({
           status: 200,
           success: `House with id of ${houseId} Retrieved Successfully`,
-          data: findHouse
+          data: findHouse,
         });
-      }else {
+      } else {
         res.status(404).json({
           status: 404,
           error: 'House with given Id not found!',
@@ -88,4 +106,5 @@ async getHouses(req, res) {
       }
     }
 }
+
 export default Houses;
