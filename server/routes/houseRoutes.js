@@ -11,6 +11,6 @@ const House = new HouseController();
 
 router.post('/', [authMiddleware.verifyUser, connectMultiparty, house.validateCreateHouse], House.postHouse);
 router.get('/', House.getHouses);
-
+router.get('/:id', house.validateparamsId, House.fetchId);
 
 export default router;
