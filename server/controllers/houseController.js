@@ -5,17 +5,16 @@ import dotenv from 'dotenv';
 import cloudinary from 'cloudinary';
 import { House } from '../config/dbConfig';
 
-
 dotenv.config();
 cloudinary.config({
   cloud_name: process.env.cloud_name,
   api_key: process.env.api_key,
   api_secret: process.env.api_secret,
 });
+
 class Houses {
    postHouse(req, res) {
     const filename = req.files.images.path;
-
     cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
       try {
         if (!err) {
@@ -27,9 +26,7 @@ class Houses {
             res.status(201).json({
               status: 201,
               success: 'House successfully posted',
-              data: [{
-                postedHouse,
-              }],
+              data: postedHouse,
             });
           } else {
             res.status(500).json({
@@ -43,9 +40,32 @@ class Houses {
         status: 500,
         error: `${error}`,
       });
+    }
+  });
+ }
+
+//  get all available houses for sale
+async getHouses(req, res) {
+  try {
+    const findHouse = await House.findAll();
+    if (!findHouse) {
+      res.status(404).json({
+        status: 404,
+        message: 'No houses found',
+      });
+      return;
+    }
+    res.status(200).json({
+      status: 200,
+      data: findHouse,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 500,
+      error: `${error}`,
+    });
   }
-});
-   }
+}
 
   /**
    * @author Carlos Gringo
