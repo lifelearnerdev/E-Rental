@@ -57,7 +57,7 @@ describe('LANDLORD SHOULD BE ABLE TO POST HOUSE ', () => {
       .attach('images', fs.readFileSync('UI/img/three.jpg'), 'three.jpg')
       .end((err, res) => {
         expect(res).to.have.status(403);
-        expect(res.body).to.have.property('error').eqls('jwt malformed');
+        expect(res.body).to.have.property('error');
       });
   });
   House.destroy({ truncate: true, cascade: false });
