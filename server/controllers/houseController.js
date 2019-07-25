@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable indent */
 import dotenv from 'dotenv';
@@ -17,7 +18,7 @@ class Houses {
 
     cloudinary.v2.uploader.upload(filename, { tags: 'E-rental' }, async (err, image) => {
       try {
-        if (err) { console.log(err); } else {
+        if (!err) {
           const imgURL = image.secure_url;
           const payload = req.body;
           payload.images = imgURL;
@@ -38,10 +39,12 @@ class Houses {
           }
         }
       } catch (error) {
-        console.log(error);
-      }
-    });
+       return res.status(500).json({
+        status: 500,
+        error: `${error}`,
+      });
   }
+});
+   }
 }
-
 export default Houses;
