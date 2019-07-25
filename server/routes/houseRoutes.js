@@ -10,6 +10,7 @@ const router = express.Router();
 const House = new HouseController();
 
 router.post('/', [authMiddleware.verifyUser, connectMultiparty, house.validateCreateHouse], House.postHouse);
+router.get('/', House.getHouses);
 
 
 export default router;

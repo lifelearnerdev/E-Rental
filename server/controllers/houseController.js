@@ -43,5 +43,28 @@ class Houses {
     }
   });
  }
+
+//  get all available houses for sale
+async getHouses(req, res) {
+  try {
+    const findHouse = await House.findAll();
+    if (!findHouse) {
+      res.status(404).json({
+        status: 404,
+        message: 'No houses found',
+      });
+      return;
+    }
+    res.status(200).json({
+      status: 200,
+      data: findHouse,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 500,
+      error: `${error}`,
+    });
+  }
+}
 }
 export default Houses;

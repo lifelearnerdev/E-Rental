@@ -2,7 +2,7 @@
 import chai from 'chai';
 import chaiHTTP from 'chai-http';
 import server from '../../app';
-import User from '../config/dbConfig';
+import { User } from '../config/dbConfig';
 import { newUser, theUser } from './dummy';
 
 chai.use(chaiHTTP);
