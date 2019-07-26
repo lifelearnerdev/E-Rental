@@ -63,7 +63,7 @@ class Houses {
   async getHouses(req, res) {
     try {
       const findHouse = await House.findAll();
-      if (!findHouse) {
+      if (findHouse.length === 0) {
         res.status(404).json({
           status: 404,
           message: 'No houses found',
