@@ -6,7 +6,7 @@ import { House, Flag } from '../config/dbConfig';
 
     /**
     * @author Carlos Gringo
-    * @description The following function handles user view a specific house
+    * @description This Class handles user flagging house as fraudelent
     */
 class Flags {
     async flagHouse(req, res) {
