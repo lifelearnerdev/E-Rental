@@ -17,3 +17,17 @@ describe('HOUSE ENDPOINT TESTS ', () => {
       });
   });
 });
+
+describe('GETTING ALL HOUSES TESTS', () => {
+  it('Should not get all houses for rent', (done) => {
+    chai.request(app)
+      .get('/api/v1/houses')
+      .end((err, res) => {
+        res.body.should.have.status(404);
+        res.body.should.have.property('status').eql(404);
+        res.body.should.have.property('message');
+        res.body.should.be.a('object');
+        done();
+      });
+  });
+});
