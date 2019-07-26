@@ -3,6 +3,7 @@ import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
 import UserModel from '../models/users';
 import HouseModel from '../models/houses';
+import FlagModel from '../models/flags';
 
 dotenv.config();
 
@@ -36,5 +37,8 @@ if (process.env.NODE_ENV === 'test') {
 
 const User = UserModel(sequelize, Sequelize);
 const House = HouseModel(sequelize, Sequelize);
+const Flag = FlagModel(sequelize, Sequelize);
 
-export { sequelize, User, House };
+export {
+  sequelize, User, House, Flag,
+};
